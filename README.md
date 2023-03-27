@@ -22,8 +22,11 @@ Starting Backend and Frontend of the application
 ```
 ## Limitations
  - Math element should have the highest id value while generating other datasets. E.g. 
-E.g. 
+
 1. ID element
 2. Integer element
 3. Math element
 
+ - The column must be specified as "c + number_of_column"
+E.g. 
+ - c1 + 5 * c2
