@@ -3,7 +3,7 @@
 ## Requirements 
 
 - Frontend: NodeJS and npm 
-- Backend: python fast api 
+- Backend: Python Fast Api 
 
 ## Building the project
 The building of the project should be done first time.
