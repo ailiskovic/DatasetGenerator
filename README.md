@@ -3,7 +3,7 @@
 ## Requirements 
 
 - Frontend: NodeJS and npm 
-- Backend: open-jdk 18, maven
+- Backend: python fast api 
 
 ## Building the project
 The building of the project should be done first time.

@@ -187,6 +187,7 @@ export default function CreateNewSample() {
   /** Handler for adding cauchy distribution element */
   function handleCauchyDistributionElement()
   { 
+    // alert('Not supprted anymore!'); 
     let id = elementObjects.length
     updateElementObjects( arr => [...arr, {id: id, type: elementTypes[6], name:"", x0Value:"", lambdaValue:""}]);
   }
@@ -194,21 +195,22 @@ export default function CreateNewSample() {
   /** Handler for adding hawkess element */
   function handleHawkesElement()
   { 
-    let id = elementObjects.length
-    updateElementObjects( arr => [...arr, {id: id, type: elementTypes[8], name:"", lambdaValue:"", alphaValue:"", 
-    betaValue:""}]);
+    alert('Not supprted anymore!'); 
+    // let id = elementObjects.length
+    // updateElementObjects( arr => [...arr, {id: id, type: elementTypes[8], name:"", lambdaValue:"", alphaValue:"", 
+    // betaValue:""}]);
   }
 
   /** Handler for adding math element */
   function handleMathElement()
-  { 
+  {
     let id = elementObjects.length
     updateElementObjects( arr => [...arr, {id: id, type: elementTypes[9], name:"", formulaValue:""}]);
   }
 
   /** Handler for adding random walk normal distribution element */
   function handleRandomWalkNormalDistributionElement()
-  { 
+  {
     let id = elementObjects.length
     updateElementObjects( arr => [...arr, {id: id, type: elementTypes[10], name:"", x0Value:"", muValue:"", 
                                                                                                       sigmaValue:""}]);
@@ -216,7 +218,7 @@ export default function CreateNewSample() {
 
   /** Handler for adding random walk binomial distribtion element */
   function handleRandomWalkBinomialDistributionElement()
-  { 
+  {
     let id = elementObjects.length
     updateElementObjects( arr => [...arr, {id: id, type: elementTypes[11], name:"", x0Value:"", nTrialsValue:"", 
                                                                                                           pValue:""}]);
@@ -359,7 +361,8 @@ export default function CreateNewSample() {
       rowNumbers: numberOfRows, 
       rows: elementObjects
     }
-    const result = await axios.post('http://localhost:8080/api/createNewDataset',objectToSend).then();
+    console.log(objectToSend)
+    const result = await axios.post('http://127.0.0.1:8000/api/createNewDataset',objectToSend).then();
 
     var fileDownload = require('js-file-download');
     var fileName = nameOfFile + '.csv'

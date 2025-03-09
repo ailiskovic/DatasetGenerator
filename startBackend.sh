@@ -1,2 +1,2 @@
 cd backend
-mvn spring-boot:run
+uvicorn main:app --reload
